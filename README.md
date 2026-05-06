@@ -18,7 +18,7 @@ The command that the user can perform are the following :
 - **ls** list all the nodes by their ID.
 - **ls -l** list all the node and each block they have by their ID.
 - **sync** syncronise the linked list.
-- **quit** save the linked list and quit the program. When permorming this command, a message is printed to inform the user the linked list is saved.
+- **quit** save the linked list and quit the program. When performing this command, a message is printed to inform the user the linked list is saved.
 
 If a command is succesfull, the program print OK and a newline.
 If not the corresponding error is printed :
@@ -38,19 +38,23 @@ Each prompt display the following :
 Exemple for a linked list with 3 nodes that are syncronised : **[s3]>**
 
 ## Description
-TODO - How have you solved the problem?
+This program is starts an infinite loop that stops whenever the input is "quit" or the command CTRL + C that hard stops the program.
+Each input entered by the user is split and calls each function accordingly, then returns the modified linked list. If the input detected is wrong, it calls the corresponding error.
+Each loop, the number of nodes and the state of the linked list is calculated to print it. When the sync function is called, a "ghost" linked list is created when each block is added one by one
+When quiting the program using the command, a savefile is created where the linked list is written and "Backing up blockchain..." is written in the terminal.
+Each line corresponds to a node and it the contains the blocks attached to it.
+When launching the program, it checks for the file. If it doesn't exist, it prints "No Backup Found: Starting New Blockchain". If it does, it prints "Restoring From Backup" and recreates the blockchain.
 
 ## Installation
-TODO - How to install your project? npm install? make? make re?
+There is no installation required for this programm
 
 ## Usage
-TODO - How does it work?
+To compile the programm use the command :
 ```
-./my_project argument1 argument2
+make
 ```
 
-### The Core Team
-
-
-<span><i>Made at <a href='https://qwasar.io'>Qwasar SV -- Software Engineering School</a></i></span>
-<span><img alt='Qwasar SV -- Software Engineering School's Logo' src='https://storage.googleapis.com/qwasar-public/qwasar-logo_50x50.png' width='20px' /></span>
+To execute it use the command :
+```
+./my_blockchain
+```
