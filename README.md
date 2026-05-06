@@ -48,9 +48,6 @@ Each line corresponds to a node and it the contains the blocks attached to it.
 
 When launching the program, it checks for the file. If it doesn't exist, it prints "No Backup Found: Starting New Blockchain". If it does, it prints "Restoring From Backup" and recreates the blockchain.
 
-## Installation
-There is no installation required for this programm
-
 ## Usage
 To compile the programm use the command :
 ```
