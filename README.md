@@ -39,10 +39,13 @@ Exemple for a linked list with 3 nodes that are syncronised : **[s3]>**
 
 ## Description
 This program is starts an infinite loop that stops whenever the input is "quit" or the command CTRL + C that hard stops the program.
+
 Each input entered by the user is split and calls each function accordingly, then returns the modified linked list. If the input detected is wrong, it calls the corresponding error.
 Each loop, the number of nodes and the state of the linked list is calculated to print it. When the sync function is called, a "ghost" linked list is created when each block is added one by one
+
 When quiting the program using the command, a savefile is created where the linked list is written and "Backing up blockchain..." is written in the terminal.
 Each line corresponds to a node and it the contains the blocks attached to it.
+
 When launching the program, it checks for the file. If it doesn't exist, it prints "No Backup Found: Starting New Blockchain". If it does, it prints "Restoring From Backup" and recreates the blockchain.
 
 ## Installation
